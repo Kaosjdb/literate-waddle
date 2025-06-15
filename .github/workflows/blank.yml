@@ -25,7 +25,7 @@ jobs:
     - name: Setup
       uses: actions/checkout@v4
     - name: clone
-      run: sleep 2m
+      run: sleep 2s
   chat:
     needs: me
     runs-on: ubuntu-latest
